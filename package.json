@@ -1,11 +1,11 @@
 {
-  "name": "create-nodejs-express-app",
-  "version": "1.7.0",
-  "description": "Create a Node.js app for building production-ready RESTful APIs using Express, by running one command",
+  "name": "samhita-rest",
+  "version": "0.1.0",
+  "description": "Backend REST API service for samhita website",
   "bin": "bin/createNodejsApp.js",
   "main": "src/index.js",
-  "repository": "https://github.com/hagopj13/node-express-boilerplate.git",
-  "author": "Hagop Jamkojian <hagopj13@gmail.com>",
+  "repository": "https://github.com/k173-x/samhita-rest.git",
+  "author": "Aadhitya A <aadhitya864@gmail.com>",
   "license": "MIT",
   "engines": {
     "node": ">=12.0.0"
@@ -29,8 +29,6 @@
   "keywords": [
     "node",
     "node.js",
-    "boilerplate",
-    "generator",
     "express",
     "rest",
     "api",
