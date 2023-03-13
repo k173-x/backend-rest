@@ -8,6 +8,8 @@ COPY package.json yarn.lock ./
 
 USER node
 
+CMD ["cd", ".."]
+
 RUN yarn install 
 
 COPY --chown=node:node . .
