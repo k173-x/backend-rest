@@ -1,8 +1,8 @@
-FROM node:alpine
+FROM node:lts-alpine
 
-RUN mkdir -p /usr/src/node-app && chown -R node:node /usr/src/node-app
+RUN mkdir -p /usr/src/samhita-rest && chown -R node:node /usr/src/samhita-rest
 
-WORKDIR /usr/src/node-app
+WORKDIR /usr/src/samhita-rest
 
 COPY package.json yarn.lock ./
 
