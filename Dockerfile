@@ -1,14 +1,12 @@
 FROM node:lts-alpine
 
-RUN mkdir -p /usr/src/samhita-rest && chown -R node:node /usr/src/samhita-rest
+RUN mkdir -p /usr/src/samhita-REST && chown -R node:node /usr/src/samhita-REST
 
-WORKDIR /usr/src/samhita-rest
+WORKDIR /usr/src/samhita-REST
 
 COPY package.json yarn.lock ./
 
 USER node
-
-CMD ["cd", ".."]
 
 RUN yarn install 
 
