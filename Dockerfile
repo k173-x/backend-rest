@@ -2,11 +2,11 @@ FROM node:lts-alpine
 
 RUN mkdir -p /usr/src/ && chown -R node:node /usr/src/
 
-RUN mkdir /usr/src/samhita-rest && chown -R node:node /usr/src/samhita-rest
+RUN git clone https://github.com/k173-x/samhita-rest.git /usr/src/samhita-rest
+
+RUN chown -R node:node /usr/src/samhita-rest
 
 WORKDIR /usr/src/samhita-rest
-
-COPY package.json yarn.lock ./
 
 USER node
 
