@@ -6,6 +6,7 @@ const compression = require('compression');
 const cors = require('cors');
 const passport = require('passport');
 const httpStatus = require('http-status');
+const expressip = require('express-ip');
 const config = require('./config/config');
 const morgan = require('./config/morgan');
 const { jwtStrategy } = require('./config/passport');
@@ -15,6 +16,8 @@ const { errorConverter, errorHandler } = require('./middlewares/error');
 const ApiError = require('./utils/ApiError');
 
 const app = express();
+
+app.set('trust proxy', true);
 
 if (config.env !== 'test') {
   app.use(morgan.successHandler);
@@ -63,5 +66,7 @@ app.use(errorConverter);
 
 // handle error
 app.use(errorHandler);
+
+app.use(expressip().getIpInfoMiddleware);
 
 module.exports = app;
