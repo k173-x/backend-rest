@@ -4,7 +4,7 @@ RUN mkdir -p /usr/src/samhita-REST && chown -R node:node /usr/src/samhita-REST
 
 WORKDIR /usr/src/samhita-REST
 
-COPY package.json yarn.lock ./
+COPY . /usr/src/samhita-REST/
 
 USER node
 
